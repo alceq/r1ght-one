@@ -58,7 +58,7 @@
 
     // ── Grid stagger animations ──
     const grids = document.querySelectorAll(
-      '.services-grid, .guarantee-grid, .results-metrics, .pricing-grid'
+      '.services-grid, .guarantee-grid, .results-metrics, .pricing-grid, .case-grid'
     );
 
     grids.forEach((grid) => {
@@ -269,6 +269,54 @@
     }
   }
 
+  // ── Trust badge entrance stagger ──
+  function initTrustBadges() {
+    const badges = document.querySelectorAll('.trust-badge');
+    if (!badges.length) return;
+
+    gsap.fromTo(
+      badges,
+      { opacity: 0, y: 20, scale: 0.9 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.5,
+        ease: 'back.out(1.5)',
+        stagger: 0.08,
+        scrollTrigger: {
+          trigger: '.trust-badges',
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  }
+
+  // ── Case study metric lift pulse ──
+  function initCaseStudyAnimations() {
+    const lifts = document.querySelectorAll('.case-lift');
+    if (!lifts.length) return;
+
+    lifts.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, x: -20 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    });
+  }
+
   // ── Initialize all animations ──
   function init() {
     initHeroAnimation();
@@ -279,6 +327,8 @@
     initCTAAnimation();
     initNavbarScroll();
     initActiveNavLinks();
+    initTrustBadges();
+    initCaseStudyAnimations();
 
     // Refresh ScrollTrigger after everything loads
     window.addEventListener('load', () => {

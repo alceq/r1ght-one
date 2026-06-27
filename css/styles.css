@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ── Google Fonts ── */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 /* ── Design Tokens ── */
 :root {
@@ -32,8 +32,14 @@
   --error: #ff4466;
 
   /* Typography */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+
+  /* Trust & Authority tokens */
+  --trust-gold: #F59E0B;
+  --trust-green: #059669;
+  --trust-blue: #1E40AF;
+  --badge-height: 48px;
 
   --fs-display: clamp(3rem, 6vw, 5.5rem);
   --fs-h1: clamp(2.2rem, 4vw, 3.5rem);
@@ -1523,6 +1529,244 @@ button {
   .hero-ctas .btn {
     width: 100%;
   }
+}
+
+/* ── Stat Pulse Animation ── */
+@keyframes stat-pulse {
+  0%, 100% { text-shadow: 0 0 0px rgba(0, 212, 255, 0); }
+  50% { text-shadow: 0 0 24px rgba(0, 212, 255, 0.45), 0 0 48px rgba(0, 212, 255, 0.15); }
+}
+
+.stat-number {
+  animation: stat-pulse 3s ease-in-out infinite;
+}
+
+/* ── Trust Badge Strip ── */
+.trust-badges {
+  padding: var(--space-lg) clamp(1.5rem, 5vw, 4rem);
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--surface-border);
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.trust-badges-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.trust-badge:hover {
+  border-color: rgba(0, 212, 255, 0.25);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.trust-badge .badge-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-badge.gold .badge-icon { color: var(--trust-gold); }
+.trust-badge.green .badge-icon { color: var(--trust-green); }
+.trust-badge.cyan .badge-icon { color: var(--accent-cyan); }
+.trust-badge.purple .badge-icon { color: var(--accent-purple); }
+
+/* ── Before / After Case Study Cards ── */
+.case-studies {
+  background: var(--bg-primary);
+}
+
+.case-header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.case-header .section-label { justify-content: center; }
+.case-header .section-subtitle { margin: 0 auto; }
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-2xl);
+}
+
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.case-card:hover {
+  border-color: rgba(0, 212, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.case-card-header {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--surface-border);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.case-industry-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(0, 212, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.case-industry-icon svg { width: 20px; height: 20px; }
+
+.case-company { font-family: var(--font-heading); font-size: var(--fs-small); font-weight: 600; color: var(--text-primary); }
+.case-location { font-size: var(--fs-xs); color: var(--text-tertiary); margin-top: 0.1rem; }
+
+.case-body {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 0;
+}
+
+.case-before,
+.case-after {
+  padding: var(--space-md) var(--space-lg);
+}
+
+.case-divider {
+  background: var(--surface-border);
+  margin: var(--space-md) 0;
+}
+
+.case-side-label {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-sm);
+}
+
+.case-before .case-side-label { color: var(--text-tertiary); }
+.case-after .case-side-label { color: var(--accent-cyan); }
+
+.case-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-metric-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.case-metric-name {
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.case-metric-value {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 700;
+}
+
+.case-before .case-metric-value { color: var(--text-tertiary); }
+.case-after .case-metric-value { color: var(--text-primary); }
+
+.case-metric-value.highlight { color: var(--success); }
+
+.case-footer {
+  padding: var(--space-sm) var(--space-lg);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.04), rgba(124, 58, 237, 0.04));
+  border-top: 1px solid var(--surface-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-lift {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: 700;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.case-duration {
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}
+
+@media (max-width: 768px) {
+  .case-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Security Badges (CTA section) ── */
+.form-trust-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--surface-border);
+}
+
+.form-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.form-trust-item svg {
+  width: 14px;
+  height: 14px;
+  color: var(--trust-green);
+  flex-shrink: 0;
 }
 
 /* ── Announcement Banner ── */
