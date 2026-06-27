@@ -1852,6 +1852,21 @@ body.with-banner #hero {
   padding-top: calc(6rem + 40px);
 }
 
+/* ── Hero Geo Row ── */
+.hero-geo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-geo-row svg {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
 /* ── Hero Phone Row ── */
 .hero-phone-row {
   display: flex;

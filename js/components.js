@@ -16,11 +16,11 @@
 
     new Typed('#heroTyped', {
       strings: [
-        'Websites that convert at 3× industry average.',
-        'Chatbots that handle 80% of inquiries while you sleep.',
-        'Lead scoring that finds your highest-value customers.',
-        'SEO engines that keep you on page one — automatically.',
-        'Analytics that tell you exactly what to do next.',
+        'AI websites for HVAC companies that convert at 3× the industry average.',
+        'AI chatbots that handle 80% of home service inquiries while you sleep.',
+        'Lead scoring that finds your highest-value HVAC customers first.',
+        'SEO that keeps your home service company on page one — automatically.',
+        'Analytics that show exactly where your HVAC revenue is leaking.',
       ],
       typeSpeed: 35,
       backSpeed: 20,
