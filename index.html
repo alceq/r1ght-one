@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R1GHT ONE — AI Solutions That Build Your Business</title>
+  <meta name="description" content="R1GHT ONE builds high-performing AI services for service companies. AI websites, chatbots, lead scoring, automation, and analytics that deliver measurable results.">
+  <meta name="theme-color" content="#06060b">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- CDN Libraries -->
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+  <!-- Vanilla Tilt -->
+  <script src="https://unpkg.com/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js" defer></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body class="with-banner">
+
+  <!-- ═══════════════ ANNOUNCEMENT BANNER ═══════════════ -->
+  <div class="announcement-bar" id="announcementBar">
+    <span class="ann-text">
+      🎯 <span class="ann-highlight">LIMITED TIME:</span> Free AI Audit + 90-Day Strategy Call
+      — <span class="ann-highlight">$750 value</span> — Ends Friday
+    </span>
+    <a href="#cta" class="ann-cta">Claim Now →</a>
+    <button class="ann-close" id="annClose" aria-label="Dismiss announcement">✕</button>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">R1GHT ONE</div>
+  </div>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">
+        <span class="logo-r1ght">R<span class="logo-1">1</span>GHT</span>&nbsp;<span class="logo-one">ONE</span>
+      </a>
+
+      <div class="navbar-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#results">Results</a>
+        <a href="#guarantee">Guarantee</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#cta">Contact</a>
+      </div>
+
+      <div class="navbar-cta">
+        <a href="tel:+15125551234" class="navbar-phone" aria-label="Call R1GHT ONE">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (512) 555-1234
+        </a>
+        <a href="#cta" class="btn btn-primary btn-sm">Free AI Audit</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section id="hero" class="section">
+    <div class="hero-canvas" id="heroCanvas"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        AI-Powered Solutions for Service Companies
+      </div>
+
+      <h1 class="hero-title">
+        We Build <span class="gradient-text">AI</span> That<br>Builds Your <span class="gradient-text">Business</span>
+      </h1>
+
+      <div class="hero-typed-wrap">
+        <span class="hero-typed" id="heroTyped"></span>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#cta" class="btn btn-primary btn-lg">Get Your Free AI Audit</a>
+        <a href="#results" class="btn btn-secondary btn-lg">See Our Work →</a>
+      </div>
+
+      <div class="hero-phone-row">
+        <span class="hero-phone-label">Prefer to talk? Call us now:</span>
+        <a href="tel:+15125551234" class="hero-phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          (512) 555-1234
+        </a>
+        <span class="hero-phone-divider">·</span>
+        <span class="hero-availability">Available Mon–Sat, 8am–8pm CT</span>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter" data-target="150">0</span><span class="accent">+</span></div>
+          <div class="stat-label">Businesses Transformed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="accent">4.9</span>★ from <span class="counter" data-target="87">0</span></div>
+          <div class="stat-label">Client Reviews</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="accent">$</span><span class="counter" data-target="2.4" data-decimal="true">0</span><span class="accent">M</span></div>
+          <div class="stat-label">Revenue Generated for Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SOCIAL PROOF MARQUEE ═══════════════ -->
+  <section class="marquee-section" aria-label="Industries served">
+    <p class="marquee-label">Trusted by service companies across Texas and beyond</p>
+    <div class="marquee-track" id="marqueeTrack">
+      <!-- Set 1 -->
+      <div class="marquee-item"><i data-lucide="thermometer"></i> HVAC Companies</div>
+      <div class="marquee-item"><i data-lucide="droplets"></i> Plumbing Services</div>
+      <div class="marquee-item"><i data-lucide="zap"></i> Electrical Contractors</div>
+      <div class="marquee-item"><i data-lucide="home"></i> Roofing Companies</div>
+      <div class="marquee-item"><i data-lucide="car"></i> Auto Services</div>
+      <div class="marquee-item"><i data-lucide="trees"></i> Landscaping</div>
+      <div class="marquee-item"><i data-lucide="shield-check"></i> Security Systems</div>
+      <div class="marquee-item"><i data-lucide="spray-can"></i> Pest Control</div>
+      <div class="marquee-item"><i data-lucide="paintbrush"></i> Painting Contractors</div>
+      <div class="marquee-item"><i data-lucide="wrench"></i> General Contractors</div>
+      <!-- Set 2 (duplicate for seamless loop) -->
+      <div class="marquee-item"><i data-lucide="thermometer"></i> HVAC Companies</div>
+      <div class="marquee-item"><i data-lucide="droplets"></i> Plumbing Services</div>
+      <div class="marquee-item"><i data-lucide="zap"></i> Electrical Contractors</div>
+      <div class="marquee-item"><i data-lucide="home"></i> Roofing Companies</div>
+      <div class="marquee-item"><i data-lucide="car"></i> Auto Services</div>
+      <div class="marquee-item"><i data-lucide="trees"></i> Landscaping</div>
+      <div class="marquee-item"><i data-lucide="shield-check"></i> Security Systems</div>
+      <div class="marquee-item"><i data-lucide="spray-can"></i> Pest Control</div>
+      <div class="marquee-item"><i data-lucide="paintbrush"></i> Painting Contractors</div>
+      <div class="marquee-item"><i data-lucide="wrench"></i> General Contractors</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SERVICES ═══════════════ -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="services-header">
+        <p class="section-label reveal">What We Build</p>
+        <h2 class="section-title reveal">AI-Powered Solutions<br>That <span class="gradient-text">Actually Work</span></h2>
+        <p class="section-subtitle reveal">Every tool we build follows 15 research-backed principles extracted from analyzing the best and worst companies in your industry.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="layout"></i></div>
+          <h3>AI Website Design</h3>
+          <p>High-converting sites built on data, not guesswork. Every element tested against 15 research-backed conversion principles.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="message-circle"></i></div>
+          <h3>AI Chatbots & Live Chat</h3>
+          <p>24/7 customer engagement that qualifies leads while you sleep. The #1 feature top companies have that competitors don't.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="target"></i></div>
+          <h3>AI Lead Scoring</h3>
+          <p>Know which leads are worth calling first. Our AI ranks every inquiry by conversion probability so you close more deals.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="file-text"></i></div>
+          <h3>AI Content & SEO</h3>
+          <p>Content engines that write, optimize, and publish — keeping you on page one without the agency retainer.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="cpu"></i></div>
+          <h3>AI Automation</h3>
+          <p>From booking to follow-up to reviews — automate the workflows that eat your team's time and let AI handle the rest.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card reveal" data-tilt>
+          <div class="service-icon"><i data-lucide="bar-chart-3"></i></div>
+          <h3>AI Analytics & Insights</h3>
+          <p>Real-time dashboards showing exactly what's working, what's not, and what to do next — powered by machine learning.</p>
+          <span class="learn-more">Learn More <i data-lucide="arrow-right" style="width:14px;height:14px"></i></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section id="process" class="section how-it-works">
+    <div class="container">
+      <div class="how-header">
+        <p class="section-label reveal">The Process</p>
+        <h2 class="section-title reveal">From <span class="gradient-text">Audit to Revenue</span><br>in 30 Days</h2>
+        <p class="section-subtitle reveal">No long contracts. No mystery. Just a proven 3-step process that gets your AI solution live and converting fast.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon"><i data-lucide="search"></i></div>
+          <h3>Free AI Audit</h3>
+          <p>We analyze your current website against our 15-point matrix — scoring SEO, conversion design, trust signals, and review authority. You'll see exactly where money is slipping through the cracks.</p>
+          <div class="step-time">
+            <i data-lucide="clock"></i> 24-hour turnaround
+          </div>
+        </div>
+
+        <div class="step-connector reveal"></div>
+
+        <div class="step-card reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon"><i data-lucide="cpu"></i></div>
+          <h3>AI Build Sprint</h3>
+          <p>Our team builds your AI-powered solution in 14–21 days. Every feature is wired to a specific conversion principle. You review and approve before anything goes live.</p>
+          <div class="step-time">
+            <i data-lucide="clock"></i> 14–21 day build
+          </div>
+        </div>
+
+        <div class="step-connector reveal"></div>
+
+        <div class="step-card reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon"><i data-lucide="trending-up"></i></div>
+          <h3>Launch & Scale</h3>
+          <p>We launch, monitor performance in real-time, and optimize. If leads don't increase within 90 days, we rebuild for free. Your growth is our guarantee.</p>
+          <div class="step-time">
+            <i data-lucide="clock"></i> Day 30 onward
+          </div>
+        </div>
+      </div>
+
+      <div class="how-cta reveal">
+        <a href="tel:+15125551234" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (512) 555-1234 to Start
+        </a>
+        <a href="#cta" class="btn btn-primary">Get Your Free Audit →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ RESULTS ═══════════════ -->
+  <section id="results" class="section">
+    <div class="container">
+      <div class="results-header">
+        <p class="section-label reveal">Proof, Not Promises</p>
+        <h2 class="section-title reveal">The <span class="gradient-text">Numbers</span> Speak<br>For Themselves</h2>
+        <p class="section-subtitle reveal">Real results from real service companies who trusted R1GHT ONE to transform their digital presence.</p>
+      </div>
+
+      <div class="results-metrics">
+        <div class="metric-card reveal">
+          <div class="metric-number"><span class="counter-value counter" data-target="312" data-suffix="%">0%</span></div>
+          <p class="metric-label">Increase in Online Bookings</p>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-number"><span class="counter-value counter" data-target="4.2" data-decimal="true" data-suffix="x">0x</span></div>
+          <p class="metric-label">More Qualified Leads</p>
+        </div>
+        <div class="metric-card reveal">
+          <div class="metric-number"><span class="counter-value"><span class="accent">$</span><span class="counter" data-target="847" data-suffix="K">0K</span></span></div>
+          <p class="metric-label">Additional Revenue in Year 1</p>
+        </div>
+      </div>
+
+      <div class="results-story reveal">
+        <blockquote>
+          "R1GHT ONE didn't just build us a website — they built us a revenue engine. In 6 months, our online bookings tripled and we had to hire two more technicians just to keep up with demand."
+        </blockquote>
+        <cite>— Marcus Chen, Owner at Lone Star Comfort HVAC, Houston TX</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ GUARANTEE ═══════════════ -->
+  <section id="guarantee" class="section">
+    <div class="container">
+      <div class="guarantee-header">
+        <p class="section-label reveal">Our Promise</p>
+        <h2 class="section-title reveal">The <span class="gradient-text">R1GHT ONE</span> Promise</h2>
+        <p class="section-subtitle reveal">We don't hide behind vague language. These are named, specific, dollar-backed guarantees — because that's what we tell our clients to do.</p>
+      </div>
+
+      <div class="guarantee-phone-bar reveal">
+        <span>Have questions about our guarantees?</span>
+        <a href="tel:+15125551234" class="guarantee-phone-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Call (512) 555-1234
+        </a>
+      </div>
+
+      <div class="guarantee-grid">
+        <div class="guarantee-card reveal" data-tilt data-tilt-max="6">
+          <div class="guarantee-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <h3>$0 Until You See Results</h3>
+          <p>We don't charge until your new system outperforms your old one. Period. Our success is tied directly to yours.</p>
+        </div>
+
+        <div class="guarantee-card reveal" data-tilt data-tilt-max="6">
+          <div class="guarantee-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <h3>90-Day Conversion Guarantee</h3>
+          <p>If your leads don't increase within 90 days of launch, we rebuild for free. No questions, no excuses, no fine print.</p>
+        </div>
+
+        <div class="guarantee-card reveal" data-tilt data-tilt-max="6">
+          <div class="guarantee-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          </div>
+          <h3>24-Hour Response, Always</h3>
+          <p>Every message answered within 24 hours, or your next month is on us. We respond as fast as we build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRICING ═══════════════ -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <div class="pricing-header">
+        <p class="section-label reveal">Investment</p>
+        <h2 class="section-title reveal">Simple, <span class="gradient-text">Transparent</span> Pricing</h2>
+        <p class="section-subtitle reveal">No hidden fees. No surprise invoices. Pick the plan that fits your growth stage.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Starter -->
+        <div class="pricing-card reveal" data-tilt data-tilt-max="5">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-name">Launch</div>
+          <div class="pricing-amount"><span class="currency">$</span>2,497</div>
+          <div class="pricing-period">one-time + $197/mo maintenance</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              AI-optimized website (up to 8 pages)
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Basic AI chatbot integration
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Monthly analytics report
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Google review widget
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Mobile-first responsive design
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-secondary">Get Started</a>
+        </div>
+
+        <!-- Growth (Featured) -->
+        <div class="pricing-card featured reveal" data-tilt data-tilt-max="5">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Growth</div>
+          <div class="pricing-name">Scale</div>
+          <div class="pricing-amount"><span class="currency">$</span>4,997</div>
+          <div class="pricing-period">one-time + $397/mo maintenance</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Everything in Launch
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Advanced AI lead scoring
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              SEO content engine (4 posts/month)
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Live review feed integration
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Priority support (4-hour response)
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Booking & scheduling automation
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card reveal" data-tilt data-tilt-max="5">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-name">Dominate</div>
+          <div class="pricing-amount">Custom</div>
+          <div class="pricing-period">tailored to your operation</div>
+          <div class="pricing-divider"></div>
+          <div class="pricing-features">
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Everything in Scale
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Full AI automation stack
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Dedicated AI strategist
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Custom API integrations
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              White-glove onboarding
+            </div>
+            <div class="pricing-feature">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Multi-location support
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-secondary">Contact Sales</a>
+        </div>
+      </div>
+
+      <div class="pricing-footer reveal">
+        <p>Not sure which plan? <a href="#cta">Book a free 15-minute strategy call →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="testimonials-header">
+        <p class="section-label reveal">Client Reviews</p>
+        <h2 class="section-title reveal">Don't Take <span class="gradient-text">Our Word</span> For It</h2>
+        <p class="section-subtitle reveal">Here's what service company owners say after working with R1GHT ONE.</p>
+      </div>
+    </div>
+
+    <div class="testimonials-track-wrapper">
+      <div class="testimonials-track" id="testimonialsTrack">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Our old website was basically a digital business card. R1GHT ONE turned it into a lead generation machine. We went from 12 online bookings a month to 48 in the first quarter."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div class="testimonial-info">
+              <div class="name">Marcus Chen</div>
+              <div class="role">Owner, Lone Star Comfort HVAC</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 2 days ago
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"The AI chatbot alone paid for the entire investment. It handles 80% of our after-hours inquiries and books appointments automatically. Our team wakes up to a full schedule."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div class="testimonial-info">
+              <div class="name">Sarah Rodriguez</div>
+              <div class="role">GM, CoolBreeze Plumbing & Electric</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 5 days ago
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"I was skeptical about AI anything — until I saw my competitors ranking above me with half our experience. R1GHT ONE's SEO engine got us back to page one in 60 days."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JW</div>
+            <div class="testimonial-info">
+              <div class="name">James Walker</div>
+              <div class="role">Founder, Walker Electric DFW</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 1 week ago
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Best investment we made this year. The lead scoring tells us exactly who to call first — our close rate went from 22% to 41%. That's real money."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DP</div>
+            <div class="testimonial-info">
+              <div class="name">David Patel</div>
+              <div class="role">Owner, Texas Shield Roofing</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 3 days ago
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"We've been in business 30 years and our website looked like it was from 2010. R1GHT ONE modernized everything and our phone started ringing from people who found us online — not just referrals."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LM</div>
+            <div class="testimonial-info">
+              <div class="name">Linda Martinez</div>
+              <div class="role">Co-Owner, Martinez Family Plumbing</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 1 week ago
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"The analytics dashboard alone is worth the monthly fee. I can finally see which marketing channels actually bring paying customers vs. tire kickers. Game changer for our ad spend."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">TN</div>
+            <div class="testimonial-info">
+              <div class="name">Tony Nguyen</div>
+              <div class="role">CEO, AirMax Heating & Cooling</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 4 days ago
+          </div>
+        </div>
+
+        <!-- Duplicate set for infinite scroll -->
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"Our old website was basically a digital business card. R1GHT ONE turned it into a lead generation machine. We went from 12 online bookings a month to 48 in the first quarter."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div class="testimonial-info">
+              <div class="name">Marcus Chen</div>
+              <div class="role">Owner, Lone Star Comfort HVAC</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 2 days ago
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"The AI chatbot alone paid for the entire investment. It handles 80% of our after-hours inquiries and books appointments automatically. Our team wakes up to a full schedule."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SR</div>
+            <div class="testimonial-info">
+              <div class="name">Sarah Rodriguez</div>
+              <div class="role">GM, CoolBreeze Plumbing & Electric</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 5 days ago
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <p class="testimonial-text">"I was skeptical about AI anything — until I saw my competitors ranking above me with half our experience. R1GHT ONE's SEO engine got us back to page one in 60 days."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JW</div>
+            <div class="testimonial-info">
+              <div class="name">James Walker</div>
+              <div class="role">Founder, Walker Electric DFW</div>
+            </div>
+          </div>
+          <div class="testimonial-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Posted 1 week ago
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA / FREE AUDIT ═══════════════ -->
+  <section id="cta" class="section">
+    <div class="container">
+      <div class="cta-content">
+        <p class="section-label reveal">Free AI Audit</p>
+        <div class="cta-value reveal">Worth $500</div>
+        <h2 class="section-title reveal">Get Your Free <span class="gradient-text">AI Audit</span></h2>
+        <p class="cta-description reveal">We'll analyze your current website against our 15-point scoring matrix and show you exactly where you're leaving money on the table.</p>
+
+        <form class="audit-form reveal" id="auditForm" action="#" method="POST">
+          <div class="form-group">
+            <input type="text" id="audit-name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="audit-email" placeholder="Email Address" required>
+          </div>
+          <div class="form-group">
+            <input type="url" id="audit-website" placeholder="Your Website URL" required>
+          </div>
+          <div class="form-group">
+            <input type="tel" id="audit-phone" placeholder="Phone (optional)">
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg">Send My Free Audit →</button>
+          </div>
+        </form>
+
+        <p class="form-disclaimer reveal">No commitment. No credit card. Just clarity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="navbar-logo">
+            <span class="logo-r1ght">R<span class="logo-1">1</span>GHT</span>&nbsp;<span class="logo-one">ONE</span>
+          </a>
+          <p>We build AI-powered solutions that help service companies convert more leads, automate operations, and dominate their market.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" aria-label="Twitter / X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path><path d="m10 15 5-3-5-3z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <a href="#services">AI Website Design</a>
+          <a href="#services">AI Chatbots</a>
+          <a href="#services">Lead Scoring</a>
+          <a href="#services">SEO & Content</a>
+          <a href="#services">Automation</a>
+          <a href="#services">Analytics</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#results">Results</a>
+          <a href="#guarantee">Our Guarantee</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonials">Reviews</a>
+          <a href="#cta">Contact</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Get In Touch</h4>
+          <a href="tel:+15125551234">(512) 555-1234</a>
+          <a href="mailto:hello@r1ghtone.com">hello@r1ghtone.com</a>
+          <a href="#">Austin, TX</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 R1GHT ONE. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ CHAT WIDGET ═══════════════ -->
+  <div class="chat-widget" id="chatWidget">
+    <div class="chat-bubble" id="chatBubble" role="button" tabindex="0" aria-label="Open live chat">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <span class="chat-badge" id="chatBadge">1</span>
+    </div>
+
+    <div class="chat-popup" id="chatPopup" role="dialog" aria-modal="true" aria-label="Live chat">
+      <div class="chat-header">
+        <div class="chat-agent-row">
+          <div class="chat-agent-avatar">R1</div>
+          <div>
+            <div class="chat-agent-name">R1GHT ONE Team</div>
+            <div class="chat-agent-status">
+              <span class="chat-status-dot"></span> Online — reply in minutes
+            </div>
+          </div>
+        </div>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chat-body" id="chatBody">
+        <div class="chat-message">
+          <div class="chat-msg-avatar">R1</div>
+          <div class="chat-msg-bubble">
+            <p>👋 Hey! Ready to see how AI can transform your service business?</p>
+            <span class="chat-msg-time">Just now</span>
+          </div>
+        </div>
+        <div class="chat-message">
+          <div class="chat-msg-avatar">R1</div>
+          <div class="chat-msg-bubble">
+            <p>We've helped 150+ companies 3× their online bookings. Want a <a href="#cta">free audit</a>? 🚀</p>
+            <span class="chat-msg-time">Just now</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-row">
+        <input type="text" id="chatInput" class="chat-input" placeholder="Type a message…" autocomplete="off">
+        <button id="chatSend" class="chat-send" aria-label="Send message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/hero.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
